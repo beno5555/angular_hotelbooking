@@ -51,7 +51,7 @@ import { NgbCarouselModule, NgbAlert } from '@ng-bootstrap/ng-bootstrap';
     MatTableModule,
     NgbCarouselModule,
     NgbAlert
-],
+  ],
   providers: [
 
     provideAnimationsAsync(),
