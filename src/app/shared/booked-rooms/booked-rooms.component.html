@@ -1,0 +1,49 @@
+
+<div class="content">
+    <table class="content-inner" (load)="getRoomsData()">
+        <thead>
+            <tr>
+                <th>Hotel</th>
+                <th>Room</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Check in</th>
+                <th>Check out</th>
+                <th>Total Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let bookedRoom of hotelServ.bookedRooms" >
+            <tr >
+                <td>
+                    <div class="hotel-info">
+                        <img [src]="hotelServ.hotel.featuredImage" alt="Hotel Image">
+                        {{ hotelServ.hotel.name }}
+                        <span>{{ hotelServ.hotel.city }}</span>
+                    </div>
+                </td>
+                <td>
+                    <div>{{ room?.name }}</div>
+                    <div>{{ room?.pricePerNight }}</div>
+                </td>
+                <td>
+                    <div class="customer-info">
+                        <strong>Name:</strong> adasd
+                        <span>Phone: asdasd</span>
+                    </div>
+                </td>
+                <td><span class="status booked">Booked</span></td>
+                <td>2024-05-07</td>
+                <td>2024-05-01</td>
+                <td>-2394€</td>
+                <td><button class="action-btn">CANCEL BOOKING</button></td>
+            </tr>
+    
+            
+    
+            <!-- Repeat similar rows as needed -->
+    
+        </tbody>
+    </table>
+</div>
+

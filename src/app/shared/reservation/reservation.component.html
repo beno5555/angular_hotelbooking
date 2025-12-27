@@ -1,0 +1,74 @@
+<div class="content">
+    <div class="content-images-form">
+
+        <!-- <div>
+            <p>{{room?.name}} </p>
+            <div class="images">
+                <img [src]="room?.images[0]?.source">
+                <img [src]="room?.images[1]?.source" [ngClass]="{'n': n}">
+                <img [src]="room?.images[4]?.source" [ngClass]="{'n': n}">
+                <img [src]="room?.images[2]?.source" [ngClass]="{'n': n}">
+                <img [src]="room?.images[3]?.source" [ngClass]="{'n': n}">
+            </div>
+            <button (click)="show()" [ngClass]="{'n': m}">show more images </button>
+            <button (click)="hide()" [ngClass]="{'n': n}">show less images</button>
+        </div> -->
+    
+        <div class="content-images">
+            <h2> {{room?.name}} </h2>
+            <ngb-carousel *ngIf="room?.images && room?.images.length">
+                <ng-template ngbSlide *ngFor="let image of room?.images" class="carousel-wrapper">
+                    <!-- <div class="title"> {{room.name}} </div> -->
+                    <img [src]="image?.source" class="d-block w-100" alt="Room {{ image?.id }}">
+        
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    
+    
+        <!-- <form>
+            <legend>Reservation</legend>
+            <h2>{{room?.name}} - {{room?.pricePerNight | currency}} a night</h2>
+            <label for="check-in">Check-in</label>
+            <input type="date" id="check-in" placeholder="Check-in">
+            <label for="check-out">Check-out</label>
+            <input type="date" id="check-out" placeholder="Check-out">
+            <label for="name">Costumer Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <label for="number">Costumer Number</label>
+            <input type="text" id="number" placeholder="Number">
+            <button>Book Now!</button>
+            
+        </form> -->
+    
+        <form [formGroup]="form" (ngSubmit)="bookLoadedRoom()" >
+            <legend>Reservation</legend>
+            <h2>{{room?.name}} - {{room?.pricePerNight | currency}} a night</h2>
+            <mat-form-field>
+                <mat-label>Date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate formControlName="checkIn" placeholder="Check In">
+                    <input matEndDate formControlName="checkOut" placeholder="Check Out">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Costumer Full Name</mat-label>
+                <input matInput formControlName="costumerName" placeholder="e.g John Doe">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>3 - 20 Characters</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Costumer Phone Number</mat-label>
+                <input matInput formControlName="costumerPhoneNumber" placeholder="e.g. 566545654">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>3 - 20 Characters</mat-hint>
+            </mat-form-field>
+            <button class="hotel-button" [disabled]="form.invalid" type="submit">Book Room</button>
+        </form>
+    </div>
+
+    <div class="content-details">
+        
+</div>

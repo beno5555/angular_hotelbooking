@@ -1,0 +1,99 @@
+.content {
+    max-width: 2000px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 0;
+}
+h2 {
+    text-align: center;
+    color: rgb(232, 221, 201);
+    transition: .3s;
+    font-size: 30px;
+}
+h2:hover {
+    color: white;
+}
+.rooms {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+/* migrated it to app.component.css */
+/* .room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    box-shadow: 5px 10px 12px rgba(107,66,38,0.15);
+    padding-bottom: 12px;
+    background: linear-gradient(90deg, #3F2A20, #4B3427);
+    border: 1px solid #E7A177;
+    cursor: pointer;
+}
+.rooms div p {
+    font-size: 22px;
+} */
+img {
+    width: 400px;
+    border-radius: 0px;
+}
+.button {
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    /* height: 3rem; */
+    padding: 0 2rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+a {
+    color: white;
+}
+@media (max-width: 500px) {
+    .content {
+        width: 500px;
+    }
+}

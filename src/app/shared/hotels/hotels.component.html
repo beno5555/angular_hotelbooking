@@ -1,0 +1,12 @@
+<div class="content">
+    <ol class="content-inner"  *ngFor="let hotel of hotelServ.hotels" [routerLink]="[hotel.id, 'rooms']">
+        <li class="content-inner-details" >
+            <p class="n">{{hotel.name}} </p>
+            <img class="hotel-img" [src]="hotel.featuredImage">
+            <button class="hotel-button" (click)="hotelServ.getHotelById(hotel.id); hotelServ.hotelId = hotel.id" [routerLink]="['/rooms', hotel.id]">View Rooms</button>
+            <!-- <button class="hotel-button" (click)="hotelServ.getHotelId(hotel.id); hotelServ.hotelId = hotel.id" [routerLink]="[hotel.id, 'rooms']">View Rooms</button> -->
+        </li>
+        <!-- <hr> -->
+    </ol>
+</div>
+

@@ -1,0 +1,225 @@
+/* img {
+    width: 600px;
+} */
+
+ngb-carousel {
+  max-width: 600px; 
+  margin: 0 auto;   
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+/* Apply styles to the carousel arrows */
+ngb-carousel {
+   display: none;
+}
+
+p{
+    font-size: 40px;
+}
+
+.content-images h2{
+    font-size: 1.6rem;
+    color: #F5EBDD;
+    text-align: center;
+    /* line-height: 3rem; */
+    margin: 0;
+}
+
+
+.content {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 25px;
+    gap: 60px;
+}
+.content-images-form {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px 35px;
+    gap: 60px;
+
+    /* border: 1px solid red; */
+}
+.content-images-form > div {
+    max-height: 500px;
+}
+.content > div {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 60px;
+}
+.content-images {
+    display: flex;
+    flex-direction: column;
+    border: 3px ridge #E2725B;
+    outline: none;
+    background: transparent;
+
+    transition: 150ms;
+    border-radius: 0.3em;
+    box-shadow: 0 0 4px 2px #E7A177;
+    gap: 10px;
+    padding-top: 10px;
+}
+.images {
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+.content div button {
+    width: 50%;
+    height: 50px;
+    text-transform: capitalize;
+}
+form {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 500px;
+    max-width: 400px;
+    color: #FFF8F0;
+    border: 3px ridge #E2725B;
+    outline: none;
+    background: transparent;
+
+    transition: 150ms;
+    border-radius: 0.3em;
+    box-shadow: 0 0 4px 2px #E7A177;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form h2 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+.date {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;    
+}
+
+/* span.mat-date-range-input-mirror {
+    visibility: visible;
+
+}
+input[_ngcontent-ng-c2645373500] {
+    display: none;
+} */
+legend {
+    font-size: 35px;
+    color: white;
+}
+
+label {
+    display: block;
+    font-size: 25px;
+}
+input {
+    /* font-size: 25pxx; */
+    /* padding: 5px 10px;
+    border-radius: 10px;
+    border: none; */
+    /* height: 50px; */
+    width: 100%;
+    
+}
+input:focus {
+    border: none;
+}
+/* form button {
+    width: 100%;
+    height: 50px;
+    text-transform: capitalize;
+
+}
+button:hover {
+    font-size: 26px;
+    height: 55px;
+    } */
+
+form button[type="submit"]:not([disabled]) {
+
+    /* background-color: #ff7043;
+    color: #fff; */
+    border: 3px ridge green;
+    box-shadow: 0 0 4px 2px green;
+
+}
+
+form button[type="submit"]:hover:not([disabled]) {
+    box-shadow: 0 1px 4px 3.5px green;
+    
+}
+
+.hotel-button:disabled {
+    cursor: not-allowed;
+    border: 3px ridge #d31901;
+    outline: none;
+    /* background: linear-gradient(135deg, #E2725B 70%, #556B2F 100%); */
+    background: transparent;
+    
+    color: #FFF8F0;
+    transition: 150ms;
+    border-radius: 0.3em;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 4px 2px red;
+}
+
+/* .content-details {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    background-color: rgb(165, 165, 165);
+    min-width: 80%;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.content-details h2 {
+    font-size: 40px;
+    color: white;
+}
+.content-details p {
+    font-size: 20px;
+} */
+
+/* .n {
+    display: none;
+    } */
+    @media (max-width: 1171px) {
+        .content {
+        justify-content: center;    
+    }
+    .content-images-form {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+    .content-images h2 {display: none;}
+    .content-images {padding: 0;}
+}
+@media (max-width: 650px) {
+    img {
+        max-width: 450px;
+    }
+}
+@media (max-width: 500px) {
+    .content {
+        width: 500px;
+    }
+}

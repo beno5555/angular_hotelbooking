@@ -1,0 +1,176 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3); */
+    /* background: linear-gradient(45deg, rgb(221, 15, 15), rgb(43, 43, 214)); */
+    background: #3B2F2F;
+    /* box-shadow: 0 2px 6px rgba(107,66,38,0.2);
+     */
+     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    /* max-width: 20000px; */
+    width: 100%;
+    z-index: 1000000;
+}
+.main {
+    margin-top: 130px;
+}
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul {
+    display: flex;
+    gap: 30px;
+}
+h2 a {
+    font-size: 35px;
+    color: #F5EBDD;
+}
+li a {
+    font-size: 23px;
+    transition: .3s;
+    color: #FFF8F0;
+}
+li a:hover {
+    font-size: 25px;
+    font-weight: 400;
+    color: #E2725B;
+    text-shadow: 0 0 2px;
+    
+}
+.room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    /* box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3); */
+    box-shadow: 5px 10px 12px rgba(107,66,38,0.15);
+    /* box-shadow: 0 0 4px 2px #E7A177; */
+    transition: .15s;
+    padding-bottom: 12px;
+    background: linear-gradient(90deg, #3F2A20, #4B3427);
+    border: 1px solid #E7A177;
+    cursor: pointer;
+}
+  .room:hover {
+    box-shadow: 0 2px 15px 7px #E7A177;
+    transform: translateY(-25px) rotate(2deg) scale(1.07);
+  }
+
+.rooms div p {
+    font-size: 22px;
+}
+/* .chat {
+  width: 400px;      
+  height: 600px;     
+  position: fixed;      
+  bottom: 20px;      
+  right: 20px;       
+  z-index: 9999;     
+} */
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    /* padding: 0 10px; */
+    gap: .5rem;
+    background: rgba(255, 255, 255, 0.045);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+.n8n-form-redirect-button {
+    position: fixed;
+    bottom: 18px;
+    right: 100px;
+    height: 64px;
+    width: 64px;
+    background: linear-gradient(135deg, #4B3427, #E2725B);;
+    padding: 0 15px;
+    border-radius: 50%; /* changed */
+    border: none;
+    /* border: 2px solid #E2725B;  */
+    box-shadow: 0 3px 10px rgba(226, 114, 91, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+.rooms-analysis-button {
+    right: 16px;
+    bottom: 100px;
+}
+.n8n-form-redirect-button:hover {
+    background: linear-gradient(135deg, #4B3427, #d4704f); 
+    box-shadow: 0 6px 16px rgba(231, 66, 102, 0.5); /* changed */
+    transform: scale(1.05);
+}
+.n8n-form-redirect-button:active {
+    background: linear-gradient(90deg, #3F2A20, #c86a4a); /* changed */
+}
+
+.large {
+    font-size: 27px;
+}
+
+:root {
+        /* --chat--color--primary: #E2725B;  */
+    /* --chat--color--primary-shade-50: #d4704f;  */
+    /* --chat--color--primary--shade-100: #c86a4a; */
+    /* --chat--color--secondary: #556B2F;  */
+    --chat--color-secondary-shade-50: #4a5f28; /* changed */
+    /* --chat--color-dark: #3F2A20;  */
+
+    --chat--border-radius: 8px; /* changed - match your button radius */
+    --chat--transition-duration: 0.2s; /* changed */
+
+    --chat--window--height: 500px;
+
+    --chat--header--background:  #4B3427; 
+    /* --chat--header--color: #FFF8F0;  */
+    --chat--header--border-bottom: 2px solid #E2725B; 
+    --chat--message--border-radius: 8px; 
+    --chat--message--bot--background: #6a3b2bc8; 
+    --chat--message--bot--color: #FFF8F0; 
+    /* --chat--message--bot--border: 1px solid #E2725B;  */
+    --chat--message--user--background:  #E7A177; 
+    --chat--message--user--color: #ffffff; 
+    --chat--message--user--border: none;
+    --chat--message--pre--background: rgba(0, 0, 0, 0.2); /* changed - darker */
+    --chat--toggle--background: linear-gradient(90deg, #3F2A20, #E2725B);
+    --chat--toggle--hover--background: linear-gradient(90deg, #3F2A20, #d4704f);
+    --chat--toggle--active--background: linear-gradient(90deg, #3F2A20, #c86a4a);
+    --chat--toggle--color: #ffffff;
+    --chat--toggle--size: 64px;
+}
+
+@media (max-width: 800px) {
+    .no-title {
+        display: none;
+    }
+    ul {padding: 0;}
+}
+@media (max-width:750px) {
+    .none {
+        display: none;
+    } 
+}
+@media (max-width: 500px) {
+    .booked-rooms {display: none;}
+}

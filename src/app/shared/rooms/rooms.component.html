@@ -1,0 +1,79 @@
+<div class="content">
+    <div class="content-filters">
+        <div class="typeSelect ">
+            <ul>
+                <button (click)="serv.getRooms(); serv.notFiltered = true" class="hotel-button" routerLink="/rooms">All</button>
+                <button class="hotel-button"*ngFor="let type of serv.roomTypes"(click)="filterRooms(type.id); serv.notFiltered = false;" routerLink="/rooms">{{type.name}} </button>
+            </ul>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="submitted()" >
+            <div class="price-range">
+                <div class="range-slider">
+                    <mat-slider class="theme-slider" min="0" max="400">
+                        <input value="0" formControlName="priceFrom" matSliderStartThumb  >
+                        <input value="400" formControlName="priceTo" matSliderEndThumb >
+                      </mat-slider>
+                </div>
+                <div class="range-values">
+                    <p> {{form.value.priceFrom | currency }}   </p>
+                    <p>{{form.value.priceTo | currency}} </p>
+                </div>
+            </div>
+            <div class="date">
+                <mat-form-field>
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate formControlName="checkIn" placeholder="Start date">
+                        <input matEndDate formControlName="checkOut" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </div>
+            <div class="extra">
+                <div class="selector">
+                    <mat-form-field>
+                        <mat-label>Select an option</mat-label>
+                        <mat-select [(value)]="selected" formControlName="roomTypeId">
+                          <mat-option>None</mat-option>
+                          <mat-option [value]="type.id" *ngFor="let type of serv.roomTypes">{{type.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="guests">
+                    <mat-form-field>
+                        <mat-label>Guests</mat-label>
+                        <mat-select formControlName="maximumGuests">
+                            <mat-option value="1">1</mat-option>
+                            <mat-option value="2">2</mat-option>
+                            <mat-option value="3">3</mat-option>
+                            <mat-option value="4">4</mat-option>
+                            <mat-option value="5">5</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="hotel-button" [disabled]="form.invalid" type="submit">Filter</button>
+                <button class="hotel-button" (click)="serv.getRooms()" type="button">Show All</button>
+            </div>
+        </form>
+    </div>
+    <h2> Featured Rooms</h2>
+    <div class="content-inner" *ngIf="serv.notFiltered; else filtered">
+        <div class="room" *ngFor="let room of serv.rooms">
+            <img [src]="room.images[0].source" alt="" [routerLink]="['/reservation', room.id]">
+            <p>{{room.name}} - {{room.pricePerNight | currency}} </p>
+            <button class="hotel-button" [routerLink]="['/reservation', room.id]">Book Now</button>
+        </div>
+    </div>
+    <ng-template #filtered>
+        <div class="content-inner">
+            <div class="room" *ngFor="let room of serv.filteredRooms">
+                <img [src]="room.images[0].source" alt="" [routerLink]="['/reservation', room.id]">
+                <p>{{room.name}} - {{room.pricePerNight | currency}} </p>
+                <button class="hotel-button" [routerLink]="['/reservation', room.id]">Book Now</button>
+            </div>
+        </div>
+    </ng-template>
+</div>

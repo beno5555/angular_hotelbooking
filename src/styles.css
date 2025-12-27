@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: rgb(120, 120, 120); */
+    background: linear-gradient(270deg, #2C1A12 0%, #3B2F2F 100%);
+}
+ul {
+    list-style: none;
+}
+li {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+button {
+    height: 50px;
+    /* background: linear-gradient(135deg, #556B2F 15%, #E2725B 100%); */
+    /* color: white; */
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0 15px;
+    transition: .1s;
+    cursor: pointer;
+    
+}
+img {
+    width: 300px;
+}
+p, pre {
+    color: white;
+}
+.active {
+    font-size: 25px;
+    font-weight: 400;
+    color: #E2725B;
+}
+.hotel-button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #E2725B;
+    outline: none;
+    /* background: linear-gradient(135deg, #E2725B 70%, #556B2F 100%); */
+    background: transparent;
+
+    color: #FFF8F0;
+    transition: 150ms;
+    border-radius: 0.3em;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 4px 2px #E7A177;
+}
+.hotel-button:hover {
+    box-shadow: 0 1px 4px 3.5px #E7A177;
+}
+
+.chat-message-markdown ul {
+    display: block;
+}
+
+  html, body { height: 100%; }
+  body { margin: 0; font-family: 'Great Vibes', cursive; }

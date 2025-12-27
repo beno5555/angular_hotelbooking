@@ -1,0 +1,13 @@
+<div class="content">
+    <h2>Recommended Rooms</h2>
+    <div class="rooms ">
+        <div class="room" *ngFor="let room of serv.availableRooms">
+            <img [src]="room.images[0].source" alt="" [routerLink]="['/reservation', room.id]">
+            <p>{{room.name}} - {{room.pricePerNight | currency}}</p>
+            <button class="hotel-button" [routerLink]="['/reservation', room.id]">Book Now!</button>
+        </div>
+    </div>
+    <button class="button">
+        <a class="button-content" routerLink="/hotels">See Hotels </a>
+    </button>  
+</div>

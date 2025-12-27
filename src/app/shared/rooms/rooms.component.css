@@ -1,0 +1,259 @@
+img {
+    width: 370px;
+    border-radius: 0;
+}
+.content {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px;
+    margin: 200px auto;
+    gap: 20px;
+}
+.content-inner {
+    max-width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+.content-inner div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    /* box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3); */
+    padding-bottom: 12px;
+    /* background-color: rgba(164, 164, 164, 0.818); */
+    cursor: pointer;
+    max-width: 370px;
+}
+.content-filters {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 20px; */
+    width: 100%;
+    
+}
+ul {
+    padding: 10px 15px;
+    display: flex;
+    gap: 35px;
+}
+li {
+    font-size: 25px;
+    transition: .3s;
+}
+li:hover {
+    font-size: 25px;
+    font-weight: 400;
+    /* color: rgb(3, 125, 125); */
+}
+.price-range {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0; */
+}
+.roomTypes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.roomTypes mat-form-field {
+    margin-top: 23px;
+}
+.typeSelect ul {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    flex-wrap: wrap;
+}
+/* .extra {
+    display: flex;
+    gap: 15px;
+} */
+p{
+    font-size: 24px;
+    transition: .15s;
+    color: #F5EBDD;
+}
+p:hover{
+    font-size: 25px;
+    font-weight: 400;
+    /* color: rgb(3, 125, 125); */
+}
+.room p {
+    line-height: 2rem;
+}
+
+h2 {
+    font-size: 50px;
+    transition: .15s;
+    color: #F5EBDD;
+    margin-top: 45px;
+    cursor: auto;
+}
+
+h2:hover {
+    /* font-weight: 200; */
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    /* padding: 0 10px; */
+    gap: .5rem;
+    background: rgba(255, 255, 255, 0.045);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    /* padding: 10px 15px;
+    box-shadow: 2px 2px 0 0; */
+}
+/* .range-slider {
+    display: flex;
+    flex-direction: column;
+}
+.range-values {
+    display: flex;
+    text-align: center;
+    gap: 5px;
+}
+.range-values p {
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+.range-slider mat-label {
+    font-size: 22px;
+    color: white;
+    } */
+    
+.price-range, .date, .extra, .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95em;
+    color: #f5f5f5;
+}
+mat-slider{
+    width: 100%;
+}
+.range-slider .theme-slider {
+    /* 1. The Active Color (Thumb & Filled Track) */
+  /* This hex code (#E07A5F) approximates the orange in your 'Home' text */
+  --mdc-slider-handle-color: #E07A5F;
+  --mdc-slider-focus-handle-color: #E07A5F;
+  --mdc-slider-hover-handle-color: #E07A5F;
+  --mdc-slider-active-track-color: #E07A5F;
+
+  /* 2. The Inactive Track (The empty part of the bar) */
+  /* Making it a semi-transparent version of the orange looks best on dark backgrounds */
+  --mdc-slider-inactive-track-color: rgba(224, 122, 95, 0.3);
+
+  /* FIX FOR THE GLOW: Change the ripple to match your orange */
+  /* We use rgba to make it 20% transparent orange so it looks like a soft glow */
+  --mat-mdc-slider-ripple-color: rgba(224, 122, 95, 0.2) !important;
+  --mat-mdc-slider-hover-ripple-color: rgba(224, 122, 95, 0.2) !important;
+  --mat-mdc-slider-focus-ripple-color: rgba(224, 122, 95, 0.2) !important;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.extra {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    
+}
+
+.selector, .guests {
+    flex: 1;
+    min-width: 120px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.buttons button {
+    /* flex: 1;
+    padding: 0.6rem 1rem; */
+    width: 50%;
+    outline: none;
+    /* background: linear-gradient(135deg, #E2725B 70%, #556B2F 100%); */
+    background: transparent;
+
+    color: #FFF8F0;
+    transition: 150ms;
+    border-radius: 0.3em;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttons button[type="submit"]:not([disabled]) {
+
+    /* background-color: #ff7043;
+    color: #fff; */
+    border: 3px ridge green;
+    box-shadow: 0 0 4px 2px green;
+
+}
+
+.buttons button[type="submit"]:hover:not([disabled]) {
+    box-shadow: 0 1px 4px 3.5px green;
+
+}
+
+.buttons button[type="button"] {
+  /* background-color: #f5f5f5;
+  color: #333; */
+}
+
+.buttons button[type="button"]:hover {
+    /* background-color: #ddd; */
+}
+.hotel-button:disabled {
+    cursor: not-allowed;
+    border: 3px ridge #d31901;
+    outline: none;
+    /* background: linear-gradient(135deg, #E2725B 70%, #556B2F 100%); */
+    background: transparent;
+
+    color: #FFF8F0;
+    transition: 150ms;
+    border-radius: 0.3em;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 4px 2px red;
+}
+@media (max-width: 911px) {
+    .content-filters {
+        flex-direction: column-reverse;
+    }
+}
