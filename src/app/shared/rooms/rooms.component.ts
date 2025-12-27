@@ -50,19 +50,19 @@ export class RoomsComponent implements OnInit{
       const id = params.get('id');
       if(id) {
         this.serv.getRooms();
-        console.log("All rooms just before filtering by type: " + this.serv.rooms);
+        // console.log("All rooms just before filtering by type: " + this.serv.rooms);
       }
     })
     await new Promise(resolve => setTimeout(resolve, 650)); 
     this.serv.filteredRooms = this.serv.rooms.filter(room => room.roomTypeId === id)
-    console.log("Filtered rooms: " + this.serv.filteredRooms);
+    // console.log("Filtered rooms: " + this.serv.filteredRooms);
   }
   showAll() {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       if(id) {
         this.serv.getHotelById(+id);
-        console.log("Id but retrieved from route params" + id);
+        // console.log("Id but retrieved from route params" + id);
         
       }
       else this.serv.getRooms();

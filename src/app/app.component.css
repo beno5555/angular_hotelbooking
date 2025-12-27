@@ -27,7 +27,7 @@ ul {
 }
 h2 a {
     font-size: 35px;
-    color: #F5EBDD;
+    color: #ebe0cf;
 }
 li a {
     font-size: 23px;
@@ -79,7 +79,7 @@ form {
 
 .n8n-form-redirect-button {
     position: fixed;
-    bottom: 18px;
+    bottom: 16px;
     right: 100px;
     height: 64px;
     width: 64px;
@@ -106,8 +106,20 @@ form {
     background: linear-gradient(90deg, #3F2A20, #c86a4a);
 }
 
+.telegram-chatbot-redirect-button {
+    bottom: 16px;
+    left: 16px;
+}
+
 .large {
     font-size: 27px;
+}
+
+.larger {
+    font-size: 34px;
+}
+.semi-white {
+    color: #ebe0cf;
 }
 
 :root {
@@ -124,21 +136,27 @@ form {
     --chat--window--height: 500px;
 
     --chat--header--background:  #4B3427; 
-    /* --chat--header--color: #FFF8F0;  */
-    --chat--header--border-bottom: 2px solid #E2725B; 
+    --chat--header--color: #f5ede0e6; 
+    --chat--header--border-bottom: 2px solid #7c3505; 
+    --chat--window--border: .5px solid #E7A177;
     --chat--message--border-radius: 8px; 
     --chat--message--bot--background: #6a3b2bc8; 
     --chat--message--bot--color: #FFF8F0; 
-    /* --chat--message--bot--border: 1px solid #E2725B;  */
+    --chat--message--bot--border: 1px solid #e9806b91; 
     --chat--message--user--background:  #E7A177; 
     --chat--message--user--color: #ffffff; 
     --chat--message--user--border: none;
-    --chat--message--pre--background: rgba(0, 0, 0, 0.2); 
+    --chat--message--pre--background: rgba(255, 0, 0, 0.2); 
     --chat--toggle--background: linear-gradient(90deg, #3F2A20, #E2725B);
     --chat--toggle--hover--background: linear-gradient(90deg, #3F2A20, #d4704f);
     --chat--toggle--active--background: linear-gradient(90deg, #3F2A20, #c86a4a);
-    --chat--toggle--color: #ffffff;
+    --chat--toggle--color: #ebe0cf;
     --chat--toggle--size: 64px;
+}
+
+.chat-layout {
+    box-shadow: 0 2px 15px 7px #E7A177;
+
 }
 
 @media (max-width: 800px) {

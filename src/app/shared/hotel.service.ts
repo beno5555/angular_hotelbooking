@@ -69,13 +69,12 @@ export class HotelService {
       .subscribe({
         next: (res: string) => {
           console.log("Booked Successfully", res);
-          alert("Booking Successful");
+          alert("Booking Successful!");
           
         },      
         error: (err) => {
           console.log("Booking failed", err);
-          alert("Booking Failed. Try Again.");
-          
+          alert(`Booking Failed! ${err.error}`);
         }
       })
   }
