@@ -6,7 +6,13 @@
 }
 body {
     /* background-color: rgb(120, 120, 120); */
-    background: linear-gradient(270deg, #2C1A12 0%, #3B2F2F 100%);
+    /* background: linear-gradient(270deg, #2C1A12 0%, #3B2F2F 100%); */
+    background: linear-gradient(
+        0deg,
+        #2C1A12 0%,  
+        #2f2828 50%, 
+        #2C1A12 100% 
+        );
 }
 ul {
     list-style: none;
