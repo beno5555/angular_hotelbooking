@@ -16,8 +16,6 @@ export class HotelService {
   notFiltered = true
   hotelId!: number
 
-  name: string = '';
-  email: string = '';
   constructor(
     private http: HttpClient
     ) { }

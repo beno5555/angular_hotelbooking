@@ -25,23 +25,6 @@ h2:hover {
     align-items: center;
     gap: 25px;
 }
-/* migrated it to app.component.css */
-/* .room {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-
-    box-shadow: 5px 10px 12px rgba(107,66,38,0.15);
-    padding-bottom: 12px;
-    background: linear-gradient(90deg, #3F2A20, #4B3427);
-    border: 1px solid #E7A177;
-    cursor: pointer;
-}
-.rooms div p {
-    font-size: 22px;
-} */
 img {
     width: 400px;
     border-radius: 0px;

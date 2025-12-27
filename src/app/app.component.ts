@@ -15,7 +15,7 @@ export class AppComponent implements AfterViewInit {
     script.textContent = `
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
       createChat({
-        webhookUrl: 'https://fortelegram.app.n8n.cloud/webhook/15627ae5-fd7a-4f08-b896-2e9144740c97/chat',
+        webhookUrl: 'https://fortelegram.app.n8n.cloud/webhook/00b93be9-b9bd-4c27-af94-bfc4ca8b1c23/chat',
 
         container: document.querySelector('.chat')
       });

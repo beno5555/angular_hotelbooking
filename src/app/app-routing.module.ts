@@ -9,14 +9,17 @@ import { BookedRoomsComponent } from './shared/booked-rooms/booked-rooms.compone
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
-  // {path: 'hotels/:id/rooms', component: RoomsComponent},
   {path: 'hotels/:id/rooms', component: RoomsComponent},
   {path: 'rooms', component: RoomsComponent},
   {path: 'hotels', component: HotelsComponent},
+  {path: 'reservation/:id', component: ReservationComponent},
+  
+  // Old Paths: 
+  
+  // {path: 'hotels/:id/rooms', component: RoomsComponent},
   // {path: 'hotels/:id/rooms/booked/:id', component: BookedRoomsComponent},
   // {path: 'rooms/:id/reservation/:id', component: ReservationComponent},
   // {path: 'rooms/reservation/:id', component: ReservationComponent},
-  {path: 'reservation/:id', component: ReservationComponent},
   // {path: 'booked', component: BookedRoomsComponent}
 ];
 

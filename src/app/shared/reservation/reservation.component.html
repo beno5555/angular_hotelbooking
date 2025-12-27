@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content-images-form">
-
+        <!-- Old Carousel -->
         <!-- <div>
             <p>{{room?.name}} </p>
             <div class="images">
@@ -13,7 +13,8 @@
             <button (click)="show()" [ngClass]="{'n': m}">show more images </button>
             <button (click)="hide()" [ngClass]="{'n': n}">show less images</button>
         </div> -->
-    
+        
+        <!-- New Carousel -->
         <div class="content-images">
             <h2> {{room?.name}} </h2>
             <ngb-carousel *ngIf="room?.images && room?.images.length">
